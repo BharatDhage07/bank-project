@@ -1,0 +1,37 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: API-GATEWAY
+
+  cloud:
+    gateway:
+      routes:
+        - id: AUTHENTICATION-SERVICE
+          uri: lb://AUTHENTICATION-SERVICE
+
+        - id: CUSTOMER-SERVICE
+          uri: lb://CUSTOMER-SERVICE
+
+        - id: CREDITCARD-SERVICE
+          uri: lb://CREDITCARD-SERVICE
+
+        - id: GIFTCARD-SERVICE
+          uri: lb://GIFTCARD-SERVICE
+
+        - id: LOAN-SERVICE
+          uri: lb://LOAN-SERVICE
+
+        - id: LOCKER-SERVICE
+          uri: lb://LOCKER-SERVICE
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
