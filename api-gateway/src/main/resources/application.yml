@@ -10,21 +10,33 @@ spring:
       routes:
         - id: AUTHENTICATION-SERVICE
           uri: lb://AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/authentication
 
         - id: CUSTOMER-SERVICE
           uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/transaction
 
         - id: CREDITCARD-SERVICE
           uri: lb://CREDITCARD-SERVICE
+          predicates:
+            - Path=/creditcard
 
         - id: GIFTCARD-SERVICE
           uri: lb://GIFTCARD-SERVICE
+          predicates:
+            - Path=/giftcard
 
         - id: LOAN-SERVICE
           uri: lb://LOAN-SERVICE
+          predicates:
+            - Path=/loan
 
         - id: LOCKER-SERVICE
           uri: lb://LOCKER-SERVICE
+          predicates:
+            - Path=/locker
 
 
 eureka:
