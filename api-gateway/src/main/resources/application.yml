@@ -7,36 +7,44 @@ spring:
 
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
       routes:
         - id: AUTHENTICATION-SERVICE
           uri: lb://AUTHENTICATION-SERVICE
           predicates:
-            - Path=/authentication
+            - Path=/authentication/**
 
         - id: CUSTOMER-SERVICE
           uri: lb://CUSTOMER-SERVICE
           predicates:
-            - Path=/transaction
+            - Path=/transaction/**
 
         - id: CREDITCARD-SERVICE
           uri: lb://CREDITCARD-SERVICE
           predicates:
-            - Path=/creditcard
+            - Path=/creditcard/**
 
         - id: GIFTCARD-SERVICE
           uri: lb://GIFTCARD-SERVICE
           predicates:
-            - Path=/giftcard
+            - Path=/giftcard/**
 
         - id: LOAN-SERVICE
           uri: lb://LOAN-SERVICE
           predicates:
-            - Path=/loan
+            - Path=/loan/**
 
         - id: LOCKER-SERVICE
           uri: lb://LOCKER-SERVICE
           predicates:
-            - Path=/locker
+            - Path=/locker/**
 
 
 eureka:
