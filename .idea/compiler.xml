@@ -6,16 +6,37 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="locker-service" />
+        <module name="giftcard-service" />
+        <module name="api-gateway" />
+        <module name="creditcard-service" />
+        <module name="server-discovery" />
+        <module name="account-transaction-management" />
         <module name="authentication" />
+        <module name="loan-management" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="account-transaction-management" target="17" />
+      <module name="api-gateway" target="17" />
       <module name="authentication" target="17" />
+      <module name="creditcard-service" target="17" />
+      <module name="giftcard-service" target="17" />
+      <module name="loan-management" target="17" />
+      <module name="locker-service" target="17" />
+      <module name="server-discovery" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account-transaction-management" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
       <module name="authentication" options="-parameters" />
+      <module name="creditcard-service" options="-parameters" />
+      <module name="giftcard-service" options="-parameters" />
+      <module name="loan-management" options="-parameters" />
+      <module name="locker-service" options="-parameters" />
+      <module name="server-discovery" options="-parameters" />
     </option>
   </component>
 </project>

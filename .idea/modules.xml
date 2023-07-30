@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/customer-service-master/account-transaction-management.iml" filepath="$PROJECT_DIR$/customer-service-master/account-transaction-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/authentication-service-master/authentication.iml" filepath="$PROJECT_DIR$/authentication-service-master/authentication.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/bank-project-new-git.iml" filepath="$PROJECT_DIR$/.idea/bank-project-new-git.iml" />
+      <module fileurl="file://$PROJECT_DIR$/creditcard-service-master/creditcard-service.iml" filepath="$PROJECT_DIR$/creditcard-service-master/creditcard-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/giftcard-service-master/giftcard-service.iml" filepath="$PROJECT_DIR$/giftcard-service-master/giftcard-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loan-service-master/loan-management.iml" filepath="$PROJECT_DIR$/loan-service-master/loan-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/locker-service-master/locker-service.iml" filepath="$PROJECT_DIR$/locker-service-master/locker-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-discovery/server-discovery.iml" filepath="$PROJECT_DIR$/server-discovery/server-discovery.iml" />
     </modules>
   </component>
 </project>

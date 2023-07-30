@@ -19,7 +19,7 @@ public class JwtService {
         headers.set("Authorization", token);
 
         HttpEntity<String> requestEntity = new HttpEntity<>("{}", headers);
-        URI accessTokenUri = URI.create("http://localhost:8080/validate-token");
+        URI accessTokenUri = URI.create("http://localhost:8090/authentication/validate-token");
         ResponseEntity<User> responseEntity = restTemplate.exchange(accessTokenUri, HttpMethod.POST, requestEntity, User.class);
         return responseEntity.getBody();
     }
